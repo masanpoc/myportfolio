@@ -13,7 +13,7 @@ const App = () => {
     setLoading(false);
   }, [])
   return (loading ? (null) : (
-    <div>
+    <div className='flex flex-col'>
       <Intro />
       <Projects />
       <About />

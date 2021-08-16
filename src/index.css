@@ -21,4 +21,7 @@
   body {
     @apply font-lato bg-green-forest;
   }
+  hr {
+    @apply border-t-2 border-blue-atlantic
+  }
 }
