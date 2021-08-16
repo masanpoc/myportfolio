@@ -1,4 +1,8 @@
 import React, {useState, useEffect} from "react";
+import Intro from './intro/Intro';
+import Projects from "./projects/Projects";
+import About from './aboutme/About';
+import Contact from './contact/Contact'
 
 const App = () => {
   // generated will be a state.generate value in Store, not a Hook
@@ -10,7 +14,10 @@ const App = () => {
   }, [])
   return (loading ? (null) : (
     <div>
-      <h2>My portfolio</h2>
+      <Intro />
+      <Projects />
+      <About />
+      <Contact />
     </div>
   ));
 };
