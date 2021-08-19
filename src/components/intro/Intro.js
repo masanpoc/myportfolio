@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro = () => {
     return (
-        <div className='flex flex-col space-y-52 md:space-y-60 pt-36 md:pt-52 items-center text-blue-atlantic' style={{height: '100vh'}}>
+        <div className='flex flex-col space-y-52 md:space-y-60 pt-36 md:pt-52 items-center text-blue-atlantic h-screen'>
             <div className='text-3xl flex flex-col space-y-2 md:pr-80'>
                 <h1>Hey,</h1>
                 <h1>I&#39;m Mario Sancho.</h1>

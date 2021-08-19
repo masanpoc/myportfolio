@@ -14,7 +14,7 @@ const App = () => {
   }, [])
   return (loading ? (null) : (
     <div className='flex flex-col'>
-      {/* <Intro /> */}
+      <Intro />
       <Projects />
       <About />
       <Contact />

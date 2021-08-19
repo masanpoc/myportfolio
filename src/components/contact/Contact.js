@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className='mt-20'>
+        <div className='mt-20 md:mt-40'>
             <hr></hr>
             <div className="flex justify-end space-x-5 pr-8 pt-10 md:pr-14 md:space-x-7 h-60 md:h-52">
                 <svg style={{ width: "60px", height: "60px" }} viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg">
