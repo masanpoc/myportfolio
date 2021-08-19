@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/masanpoc/myportfolio#readme",
   "dependencies": {
+    "gsap": "^3.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useRef, useLayoutEffect} from 'react'
 import img1 from './images/img_2_1_1.png';
 import img2 from './images/img_2_1_2.png';
 import img3 from './images/img_2_2_1.png';
 import img4 from './images/img_2_2_2.png';
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const Template = () => {
     return (
