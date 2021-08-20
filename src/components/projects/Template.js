@@ -110,7 +110,7 @@ const Template = () => {
                         end: 'top top'
                     },
                     autoAlpha: 0,
-                    xPercent: 20,
+                    xPercent: -20,
                     duration: 1
                 });
                 gsap.from(screen4, {
@@ -122,7 +122,7 @@ const Template = () => {
                         end: 'top top'
                     },
                     autoAlpha: 0,
-                    xPercent: 20,
+                    xPercent: -20,
                     delay:1,
                     duration: 1
                 });
@@ -153,18 +153,22 @@ const Template = () => {
                     <p>This project helped me develop basic programming skills. </p>
                 </div>
                 <div className='flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-center'>
-                    <div className=' flex justify-start relative w-10/12 rounded-xl overflow-hidden' style={{'marginLeft': '8.5%'}}>
+                    <div className=' flex justify-start relative w-10/12 rounded-xl' style={{'marginLeft': '8.5%'}}>
                         <img ref={el=>(screen1=el)} src={img1} className=' w-9/12 h-auto border-2 border-black rounded-xl'></img>
                         <img ref={el=>(screen2=el)} src={img2} className='absolute left-1/4 w-9/12 h-auto border-2 border-black rounded-xl'></img>
                     </div>
-                    <div className=' flex justify-start relative w-10/12 rounded-xl overflow-hidden md:mr-20' style={{'marginLeft': '8.5%'}}>
+                    <div className=' flex justify-start relative w-10/12 rounded-xl md:mr-20' style={{'marginLeft': '8.5%'}}>
                         <img ref={el=>(screen3=el)} src={img3} className=' w-9/12 h-auto border-2 border-grey-highlight rounded-xl'></img>
                         <img ref={el=>(screen4=el)} src={img4} className='absolute left-1/4 w-9/12 h-auto border-2 border-grey-highlight rounded-xl'></img>
                     </div>
                 </div>
                 <div ref={el=>(buttons=el)} className='text-center flex justify-center md:justify-start space-x-12 w-full text-yellow-dessert pt-6'>
-                        <button className=' md:ml-24 bg-blue-atlantic shadow-md px-5 py-3 rounded-xl md:text-lg md:px-7'>Visit Website</button>
-                        <button className='bg-blue-atlantic px-5 py-3 rounded-xl  md:text-lg md:px-7'>See Repo</button>
+                        <a href="https://frosty-poitras-47b88e.netlify.app/"
+                        rel="noreferrer"
+                        target="_blank" className=' md:ml-24 bg-blue-atlantic shadow-md px-5 py-3 rounded-xl md:text-lg md:px-7'>Visit Website</a>
+                        <a href="https://github.com/masanpoc/proyecto"
+                        rel="noreferrer"
+                        target="_blank" className='bg-blue-atlantic px-5 py-3 rounded-xl  md:text-lg md:px-7'>See Repo</a>
                 </div>
             </div>
         </div>

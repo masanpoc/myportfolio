@@ -114,14 +114,20 @@ const swim = () => {
                         <p>The user fills the form according to his/her preferences. Swimming blocks are generated and swimming drills are selected based on user’s input.</p>
                         <p>Overall, this project taught me to work with complex logic.</p>
                     </div>
-                    <div className=' flex justify-start relative w-10/12 rounded-xl overflow-hidden md:h-full md:mt-0' style={{'marginLeft': '7.5%'}}>
+                    <div className=' flex justify-start relative w-10/12 rounded-xl md:h-full md:mt-0' style={{'marginLeft': '7.5%'}}>
                         <img ref={el=>(screen1=el)} src={img1} className=' w-8/12 h-auto border-2 border-black rounded-xl'></img>
                         <img ref={el=>(screen2=el)} src={img2} className='absolute left-1/4 w-8/12 h-auto border-2 border-black rounded-xl'></img>
                     </div>
                 </div>
                 <div ref={el=>(buttons=el)} className='text-center flex justify-center md:justify-start space-x-12 w-full text-yellow-dessert pt-6'>
-                    <button className='md:ml-24 bg-blue-atlantic shadow-md px-5 py-3 rounded-xl md:text-lg md:px-7'>Visit Website</button>
-                    <button className='bg-blue-atlantic px-5 py-3 rounded-xl md:text-lg md:px-7'>See Repo</button>
+                    <a
+                        href="https://zen-goldberg-d89423.netlify.app/"
+                        rel="noreferrer"
+                        target="_blank"
+                     className='md:ml-24 bg-blue-atlantic shadow-md px-5 py-3 rounded-xl md:text-lg md:px-7'>Visit Website</a>
+                    <a href="https://github.com/masanpoc/swimming"
+                        rel="noreferrer"
+                        target="_blank" className='bg-blue-atlantic px-5 py-3 rounded-xl md:text-lg md:px-7'>See Repo</a>
                 </div>
             </div>
         </div>
