@@ -163,7 +163,7 @@ const Template = () => {
                     </div>
                 </div>
                 <div ref={el=>(buttons=el)} className='text-center flex justify-center md:justify-start space-x-12 w-full text-yellow-dessert pt-6'>
-                        <a href="https://frosty-poitras-47b88e.netlify.app/"
+                        <a href="https://hungry-thompson-3ad7ef.netlify.app/#/"
                         rel="noreferrer"
                         target="_blank" className=' md:ml-24 bg-blue-atlantic shadow-md px-5 py-3 rounded-xl md:text-lg md:px-7'>Visit Website</a>
                         <a href="https://github.com/masanpoc/proyecto"
