@@ -1,4 +1,4 @@
-import React, {useRef, useLayoutEffect} from 'react'
+import React, {useRef, useLayoutEffect } from 'react'
 import img1 from './images/img_1_1.png';
 import img2 from './images/img_1_2.png';
 import { gsap } from "gsap";
@@ -6,6 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const swim = () => {
+
+    const width = window.innerWidth;
+
     let title = useRef()
     let text = useRef();
     let screen1= useRef();
@@ -14,61 +17,61 @@ const swim = () => {
     const swimTimeline = useRef();
 
     useLayoutEffect(() => {
+
         function startTimeline() {
-            if(window.outerWidth>768){
+            if(width>768){
                 swimTimeline.current = gsap.timeline({
                     scrollTrigger: {
-                        scrub: 1, 
-                        markers: true,
+                        // markers: true,
                         trigger: title,
-                        // start: 'top center-=50',
-                        // end: 'top top'
+                        start: 'bottom center',
+                        end: 'top top'
                     }
                 })
                 swimTimeline.current
                 .from(text, {
                     autoAlpha: 0,
                     duration: 1,
-                    delay: 0.5,
-                    xPercent: -20
+                    yPercent: 30
                 })
                 .from(screen1, {
                     autoAlpha: 0,
                     duration: 1,
-                    yPercent: 40,
+                    xPercent: 30,
                 })
                 .from(screen2, {
                     autoAlpha: 0,
                     duration: 1,
-                    yPercent: 40,
+                    xPercent: 30,
                 })
                 .from(buttons, {
                     autoAlpha: 0,
-                    duration: 1,
-                    yPercent: 40,
+                    duration: 1
                 })
             }
             else {
                 gsap.from(text, {
                     scrollTrigger: {
-                        // scrub: 1, 
+                        // scrub: true, 
                         // markers: true,
                         trigger: text,
-                        start: 'bottom center',
-                        end: 'top top'
+                        start: 'top center+=100',
+                        end: 'top top',
+                        // onEnter: ()=>console.log('enter')
                     },
                     autoAlpha: 0,
-                    duration: 1
+                    duration: 1,
                 });
                 gsap.from(screen1, {
                     scrollTrigger: {
                         // scrub: 1, 
                         // markers: true,
                         trigger: screen1,
-                        start: 'bottom center',
+                        start: 'top center+=100',
                         end: 'top top'
                     },
                     autoAlpha: 0,
+                    xPercent: 20,
                     duration: 1
                 });
                 gsap.from(screen2, {
@@ -76,10 +79,12 @@ const swim = () => {
                         // scrub: 1, 
                         // markers: true,
                         trigger: screen2,
-                        start: 'bottom center',
+                        start: 'top center+=100',
                         end: 'top top'
                     },
                     autoAlpha: 0,
+                    xPercent: 20,
+                    delay:1,
                     duration: 1
                 });
                 gsap.from(buttons, {
@@ -87,7 +92,7 @@ const swim = () => {
                         // scrub: 1, 
                         // markers: true,
                         trigger: buttons,
-                        start: 'bottom center',
+                        start: 'top center+=100',
                         end: 'top top'
                     },
                     autoAlpha: 0,
@@ -95,7 +100,8 @@ const swim = () => {
                 });
             }
         }
-        startTimeline()
+        startTimeline();
+        
     }, [])
     
     return (
