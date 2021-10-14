@@ -3,6 +3,7 @@ import Intro from './intro/Intro';
 import Projects from "./projects/Projects";
 import About from './aboutme/About';
 import Contact from './contact/Contact'
+import Skills from "./skills/Skills";
 
 const App = () => {
   // generated will be a state.generate value in Store, not a Hook
@@ -16,6 +17,7 @@ const App = () => {
     <div className='flex flex-col'>
       <Intro />
       <Projects />
+      <Skills />
       <About />
       <Contact />
     </div>

@@ -110,9 +110,9 @@ const swim = () => {
             <div className='bg-white bg-opacity-50 flex flex-col items-center space-y-12 pt-12 pb-20  md:pt-20 md:pb-28 md:space-y-20 rounded-b-lg'>
                 <div className='flex flex-col items-center space-y-12 md:flex-row md:space-y-0 md:pr-9 md:pl-12'>
                     <div ref={el=>(text=el)} className='bg-yellow-dessert mx-5 rounded-lg shadow-md md:w-9/12 flex flex-col space-y-4 mb-4 py-6 pl-5 pr-3 md:mr-0 md:mb-0 md:py-7 md:pl-6 md:pr-5'>
-                        <p>Web app built for swimmers. The app generates custom swimming workouts.</p>
-                        <p>The user fills the form according to his/her preferences. Swimming blocks are generated and swimming drills are selected based on user’s input.</p>
-                        <p>Overall, this project taught me to work with complex logic.</p>
+                        <p>Mobile web app built for swimmers. The app generates custom swimming workouts in less than a second.</p>
+                        <p>The user fills a form according to his/her preferences. Swimming blocks are generated and swimming drills are selected based on user input. </p>
+                        <p>Once you generated your training, you can write it down on paper and carry it with you to the pool.</p>
                     </div>
                     <div className=' flex justify-start relative w-10/12 rounded-xl md:h-full md:mt-0' style={{'marginLeft': '7.5%'}}>
                         <img ref={el=>(screen1=el)} src={img1} className=' w-8/12 h-auto border-2 border-black rounded-xl'></img>

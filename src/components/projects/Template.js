@@ -148,9 +148,9 @@ const Template = () => {
             <h3 ref={el=>(title=el)} className='text-center text-base tracking-widest text-yellow-dessert bg-blue-atlantic rounded-t-lg py-2 shadow-md md:text-xl md:py-3'>WEBSITE TEMPLATE</h3>
             <div className='bg-white bg-opacity-50 flex flex-col items-center space-y-12 pt-12 pb-20 md:pt-20 md:pb-28 md:space-y-20 rounded-b-lg'>
                 <div ref={el=>(text=el)} className='bg-yellow-dessert mx-5 md:mr-20 md:ml-24 rounded-lg shadow-md flex flex-col space-y-4 mb-4 py-6 pl-5 pr-3 md:py-8 md:pr-6 md:pl-8'>
-                    <p>Responsive website template developed for musicians.</p>
-                    <p>This website can be used as a template for any type of music group. It has a consistent layout & includes animations . It also contains useful elements such as a menu or a carousel. </p>
-                    <p>This project helped me develop basic programming skills. </p>
+                    <p>Responsive web app built for the purpose of learning. </p>
+                    <p>Designed and built from scratch, it includes common website sections, e.g.: home, articles, about us, music library. </p>
+                    
                 </div>
                 <div className='flex flex-col space-y-16 md:flex-row md:space-y-0 md:justify-center'>
                     <div className=' flex justify-start relative w-10/12 rounded-xl' style={{'marginLeft': '8.5%'}}>
