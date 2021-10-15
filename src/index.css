@@ -34,4 +34,7 @@
   hr {
     @apply border-t-2 border-green-lintern opacity-90
   }
+  h1, h2, h3 {
+    @apply text-green-lintern font-adam opacity-90
+  }
 }

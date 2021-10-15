@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Intro from './intro/Intro';
 import Projects from "./projects/Projects";
-import About from './aboutme/About';
 import Contact from './contact/Contact'
 import Skills from "./skills/Skills";
 
@@ -16,9 +15,8 @@ const App = () => {
   return (loading ? (null) : (
     <div className='flex flex-col'>
       {/* <Intro /> */}
-      {/* <Projects /> */}
-      <Skills />
-      {/* <About /> */}
+      <Projects />
+      {/* <Skills /> */}
       {/* <Contact /> */}
     </div>
   ));

@@ -1,18 +1,34 @@
 import React from 'react'
-import Swim from './Swim';
-import Template from './Template'
+import {data} from './Data'
+import Project from './Project'
 
 const Projects = () => {
+    
     return (
         <div >
             <hr></hr>
-            <div className='mt-20 mb-28 md:my-40 md:mx-80 flex-col flex space-y-16 md:space-y-36'>
-                <h2 className='shadow font-medium rounded-md ml-5 md:ml-0 px-6 py-2 md:px-8 md:py-3 text-xl md:text-2xl text-center text-yellow-dessert bg-blue-atlantic tracking-widest w-min'>PROJECTS</h2>
-                <Swim />
-                <Template />
+            <div className='flex flex-col justify-center space-y-20 md:space-y-20 mt-24 md:mt-28 mb-40'>
+                
+                <h2 className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>PROJECTS</h2>
+                <div className='flex flex-col justify-center space-y-32 md:space-y-20' >
+                {data.map((projectData, i)=>{
+                    if(i==(data.length-1)){
+                        return (
+                            <Project key={projectData.appTitle.substring(0,5)} data={projectData} />
+                        )
+                    } else {
+                        return (
+                            <>
+                            <Project key={projectData.appTitle.substring(0,5)} data={projectData} />
+                            <hr className=' w-4/12 mx-auto border-dark-borders bg-dark-borders' style={{borderWidth: '1.5px'}}></hr>
+                            </>
+                        )
+                    }
+                    
+                })}
+                </div>
             </div>
-            
-        </div>
+        </div>    
     )
 }
 

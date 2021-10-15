@@ -1,15 +1,20 @@
+import img_recipes from './images/img_recipes.png'
+import img_swimming from './images/img_swimming.png';
+import img_website from './images/img_website.png';
+
 export const data = [
     {
-        appTitle: 'RECIPES $ NUTRIENTS APP',
+        appTitle: 'RECIPES & NUTRIENTS APP',
         appParagraphs: [
             'Responsive web app aimed for curious minds that love cooking but that also want to be aware of their nutrients intake. ',
             'Using this web app, you can search for any recipe you can imagine, using as many filters as you want.',
             'Once you find your recipe you can have a look at its nutrient analysis which shows valuable nutrition information through charts.'
         ],
         stackItems: ['React', 'TypeScript', 'Framer Motion', 'Git', 'Recharts', 'Styled Components', 'Google Analytics', 'PostCSS', 'Babel', 'ESLint', 'Webpack', 'Figma' ],
-        screenShot: 'url img',
+        screenShot: img_recipes,
         ghLink: 'https://github.com/masanpoc/recipes',
-        demoLink: 'https://mystifying-nobel-8d134d.netlify.app/'
+        demoLink: 'https://mystifying-nobel-8d134d.netlify.app/',
+        opacity: 0.6
     },
     {
         appTitle: 'SWIMMING APP',
@@ -19,9 +24,10 @@ export const data = [
             'Once you generated your training, you can write it down on paper and carry it with you to the pool.'
         ],
         stackItems: ['React', 'Redux', 'Tailwind CSS', 'Git', 'React Testing Library', 'Ramda', 'PostCSS', 'Babel', 'ESLint', 'Webpack', 'Figma'],
-        screenShot: 'img',
+        screenShot: img_swimming,
         ghLink: 'https://github.com/masanpoc/swimming',
-        demoLink: 'https://zen-goldberg-d89423.netlify.app/'
+        demoLink: 'https://zen-goldberg-d89423.netlify.app/',
+        opacity: 0.7,
     },
     {
         appTitle: 'RESPONSIVE WEBSITE',
@@ -30,8 +36,9 @@ export const data = [
             'Designed and built from scratch, it includes common web sections, e.g.: home, articles, about us, gallery.'
         ],
         stackItems: ['React', 'SCSS', 'GSAP', 'Git', 'Figma', 'use sound'],
-        screenShot: 'img3',
+        screenShot: img_website,
         ghLink: 'https://github.com/masanpoc/proyecto',
-        demoLink: 'https://frosty-poitras-47b88e.netlify.app/'
+        demoLink: 'https://frosty-poitras-47b88e.netlify.app/',
+        opacity: 1
     }
 ]

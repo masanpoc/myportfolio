@@ -22,18 +22,18 @@ import WebPerformance from './svg/WebPerformance'
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-    let aboutTitle = useRef();
-    let aboutText = useRef();
+    let title = useRef();
+    let skillsWrapper = useRef();
     const currentColor = "#8F8F8F";
     
     useLayoutEffect(() => {
         function fadeIn() {
             if(window.outerWidth>768){
-                gsap.from(aboutText, {
+                gsap.from(skillsWrapper, {
                     scrollTrigger: {
                         // scrub: 1, 
                         // markers: true,
-                        trigger: aboutTitle,
+                        trigger: title,
                         start: 'bottom+=100 center',
                         end: 'top top'
                     },
@@ -42,12 +42,12 @@ const Skills = () => {
                   });
             }
             else {
-                console.log(aboutText.childNodes)
-                gsap.from(aboutText.childNodes, {
+                console.log(skillsWrapper.childNodes)
+                gsap.from(skillsWrapper.childNodes, {
                     scrollTrigger: {
                         // scrub: 1, 
                         // markers: true,
-                        trigger: aboutTitle,
+                        trigger: title,
                         start: 'bottom center',
                         end: 'top top'
                     },
@@ -66,11 +66,11 @@ const Skills = () => {
             <hr></hr>
             <div className='flex flex-col justify-center space-y-16 md:space-y-20 mt-24 md:mt-28 mb-40'>
                 
-                <h2 ref={el=>(aboutTitle=el)} className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>TECH SKILLS</h2>
+                <h2 ref={el=>(title=el)} className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>TECH SKILLS</h2>
                 
                 
                     
-                    <div ref={el=>(aboutText=el)} className=' flex flex-col space-y-20 justify-center space-y-4 
+                    <div ref={el=>(skillsWrapper=el)} className=' flex flex-col space-y-20 justify-center space-y-4 
                     md:mb-6 md:pt-16 md:pb-0 md:pl-8 md:pr-8 md:border-2 md:border-dark-borders
                     md:grid grid-cols-4 md:w-7/12 md:self-center md:space-y-0
                     '>
