@@ -64,7 +64,7 @@ const Skills = () => {
     return (
         <div >
             <hr></hr>
-            <div className='flex flex-col justify-center space-y-16 md:space-y-20 mt-24 md:mt-28 mb-40'>
+            <div className='flex flex-col justify-center space-y-16 md:space-y-32 mt-24 md:mt-28 mb-40'>
                 
                 <h2 ref={el=>(title=el)} className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>TECH SKILLS</h2>
                 
@@ -78,70 +78,70 @@ const Skills = () => {
                         {/* cant loop if want to display svg and change it to light/dark */}
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <FunctionalProgramming color={currentColor}/>
-                            <h3 style={{color:currentColor}} className='text-center'>Functional Programming</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Functional Programming</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <StateManagement color={currentColor} />
-                            <h3 style={{color: currentColor}} className='text-center'>State Management</h3>
+                            <h4 style={{color: currentColor}} className='text-center'>State Management</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <VersionControl color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Version Control</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Version Control</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <TestDebugging color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Testing & Debugging</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Testing & Debugging</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <ApiIntegration color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>API Integration</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>API Integration</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3'>
                             <Componentization color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Componentization</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Componentization</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <UxDesign color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>UX Design</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>UX Design</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <TechnicalDocumentation color={currentColor} />
-                            <h3 style={{color:currentColor}} className='flex flex-col justify-center'>
+                            <h4 style={{color:currentColor}} className='flex flex-col justify-center'>
                                 <span className='text-center'>Reading & Writing </span>
                                 <span className='text-center'>Technical Documentation</span>
-                            </h3>
+                            </h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <Animation color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Animation</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Animation</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <WebPerformance color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Web Performance</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Web Performance</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <DataVisualization color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Data Visualization</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Data Visualization</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <Routing color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Routing</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Routing</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <UiDesign color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>UI Design</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>UI Design</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <Analytics color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Analytics</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Analytics</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <Research color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Research</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Research</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
                             <PackageManagement color={currentColor} />
-                            <h3 style={{color:currentColor}} className='text-center'>Package Management</h3>
+                            <h4 style={{color:currentColor}} className='text-center'>Package Management</h4>
                         </div>
                     </div>
             </div>

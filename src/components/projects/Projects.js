@@ -7,10 +7,10 @@ const Projects = () => {
     return (
         <div >
             <hr></hr>
-            <div className='flex flex-col justify-center space-y-20 md:space-y-20 mt-24 md:mt-28 mb-40'>
+            <div className='flex flex-col justify-center space-y-20 md:space-y-32 mt-24 md:mt-28 mb-40'>
                 
                 <h2 className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>PROJECTS</h2>
-                <div className='flex flex-col justify-center space-y-32 md:space-y-20' >
+                <div className='flex flex-col justify-center space-y-32 md:w-7/12 md:mx-auto md:space-y-24' >
                 {data.map((projectData, i)=>{
                     if(i==(data.length-1)){
                         return (

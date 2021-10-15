@@ -16,7 +16,7 @@ const App = () => {
     <div className='flex flex-col'>
       {/* <Intro /> */}
       <Projects />
-      {/* <Skills /> */}
+      <Skills />
       {/* <Contact /> */}
     </div>
   ));
