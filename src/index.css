@@ -16,12 +16,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "ADAM";
+  src: url("./fonts/ADAMCGPRO.woff2") format("woff2"),
+      url("./fonts/ADAMCGPRO.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 @layer base {
   body {
-    @apply font-lato bg-green-forest;
+    @apply font-lato bg-black;
   }
   hr {
-    @apply border-t-2 border-blue-atlantic
+    @apply border-t-2 border-green-lintern opacity-90
   }
 }

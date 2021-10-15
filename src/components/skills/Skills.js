@@ -42,7 +42,8 @@ const Skills = () => {
                   });
             }
             else {
-                gsap.from(aboutText, {
+                console.log(aboutText.childNodes)
+                gsap.from(aboutText.childNodes, {
                     scrollTrigger: {
                         // scrub: 1, 
                         // markers: true,
@@ -51,7 +52,8 @@ const Skills = () => {
                         end: 'top top'
                     },
                     autoAlpha: 0,
-                    duration: 1
+                    duration: 1,
+                    stagger:0.1
                 });
             }
             
@@ -60,90 +62,88 @@ const Skills = () => {
     }, [])
 
     return (
-        <div  className='md:h-screen'>
+        <div >
             <hr></hr>
-            <div className='flex flex-col justify-center space-y-12 md:space-y-28 my-24 md:mx-80 md:mt-40'>
-                <h2 ref={el=>(aboutTitle=el)} className='font-medium shadow rounded-md ml-5 md:ml-0 px-6 py-2 md:px-8 md:py-3 text-xl md:text-2xl text-center text-yellow-dessert bg-blue-atlantic tracking-widest' style={{width: 'fit-content'}}>ABOUT ME</h2>
-                <div className='bg-white bg-opacity-50 mx-2 md:mx-0 rounded-md'>
-                    <div ref={el=>(aboutText=el)} className='bg-yellow-dessert shadow-md flex flex-col space-y-4 mb-4 md:mb-6 rounded-md py-10 pl-5 pr-3 md:py-10 md:pl-10 md:pr-8'>
-                        <p>My full name is Mario Sancho-Cirer Poczatek, I&#39;m from La Coruña
-                        and I&#39;m an engineering graduate pursuing a career in Tech.
-                        </p>
-                        <p>I&#39;m a creative developer that uses effective communication and logical thinking
-                        to solve problems. 
-                        </p>
-                        <p>Some of my interests include UX Design, functional programming and research. 
-                        </p>
-                        <p>Finally, I&#39;m a person motivated by working well as part of a team and mentoring and coaching others.</p>
-                    </div>
-                    <div>
+            <div className='flex flex-col justify-center space-y-16 md:space-y-20 mt-24 md:mt-28 mb-40'>
+                
+                <h2 ref={el=>(aboutTitle=el)} className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>TECH SKILLS</h2>
+                
+                
+                    
+                    <div ref={el=>(aboutText=el)} className=' flex flex-col space-y-20 justify-center space-y-4 
+                    md:mb-6 md:pt-16 md:pb-0 md:pl-8 md:pr-8 md:border-2 md:border-dark-borders
+                    md:grid grid-cols-4 md:w-7/12 md:self-center md:space-y-0
+                    '>
 
-                        <div>
-                        <FunctionalProgramming color={currentColor} />
-                            <h3>Functional Programming</h3>
+                        {/* cant loop if want to display svg and change it to light/dark */}
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <FunctionalProgramming color={currentColor}/>
+                            <h3 style={{color:currentColor}} className='text-center'>Functional Programming</h3>
                         </div>
-                        <div>
-                        <StateManagement color={currentColor} />
-                            <h3>State Management</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <StateManagement color={currentColor} />
+                            <h3 style={{color: currentColor}} className='text-center'>State Management</h3>
                         </div>
-                        <div>
-                        <VersionControl color={currentColor} />
-                            <h3>Version Control</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <VersionControl color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Version Control</h3>
                         </div>
-                        <div>
-                        <TestDebugging color={currentColor} />
-                            <h3>Testing & Debugging</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <TestDebugging color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Testing & Debugging</h3>
                         </div>
-                        <div>
-                        <ApiIntegration color={currentColor} />
-                            <h3>API Integration</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <ApiIntegration color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>API Integration</h3>
                         </div>
-                        <div>
-                        <Componentization color={currentColor} />
-                            <h3>Componentization</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3'>
+                            <Componentization color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Componentization</h3>
                         </div>
-                        <div>
-                        <UxDesign color={currentColor} />
-                            <h3>UX Design</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <UxDesign color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>UX Design</h3>
                         </div>
-                        <div>
-                        <TechnicalDocumentation color={currentColor} />
-                            <h3>Reading & Writing Technical Documentation</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <TechnicalDocumentation color={currentColor} />
+                            <h3 style={{color:currentColor}} className='flex flex-col justify-center'>
+                                <span className='text-center'>Reading & Writing </span>
+                                <span className='text-center'>Technical Documentation</span>
+                            </h3>
                         </div>
-                        <div>
-                        <Animation color={currentColor} />
-                            <h3>Animation</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <Animation color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Animation</h3>
                         </div>
-                        <div>
-                        <WebPerformance color={currentColor} />
-                            <h3>Web Performance</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <WebPerformance color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Web Performance</h3>
                         </div>
-                        <div>
-                        <DataVisualization color={currentColor} />
-                            <h3>Data Visualization</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <DataVisualization color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Data Visualization</h3>
                         </div>
-                        <div>
-                        <Routing color={currentColor} />
-                            <h3>Routing</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <Routing color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Routing</h3>
                         </div>
-                        <div>
-                        <UiDesign color={currentColor} />
-                            <h3>UI Design</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <UiDesign color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>UI Design</h3>
                         </div>
-                        <div>
-                        <Analytics color={currentColor} />
-                            <h3>Analytics</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <Analytics color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Analytics</h3>
                         </div>
-                        <div>
-                        <Research color={currentColor} />
-                            <h3>Research</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <Research color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Research</h3>
                         </div>
-                        <div>
-                        <PackageManagement color={currentColor} />
-                            <h3>Package Management</h3>
+                        <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
+                            <PackageManagement color={currentColor} />
+                            <h3 style={{color:currentColor}} className='text-center'>Package Management</h3>
                         </div>
                     </div>
-                </div>
             </div>
            
            

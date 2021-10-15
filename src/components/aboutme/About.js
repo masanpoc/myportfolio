@@ -43,7 +43,7 @@ const About = () => {
     return (
         <div  className='md:h-screen'>
             <hr></hr>
-            <div className='flex flex-col justify-center space-y-12 md:space-y-28 my-24 md:mx-80 md:mt-40'>
+            <div className='flex flex-col justify-center space-y-12 md:space-y-28 my-24 md:mx-50 md:mt-40'>
                 <h2 ref={el=>(aboutTitle=el)} className='font-medium shadow rounded-md ml-5 md:ml-0 px-6 py-2 md:px-8 md:py-3 text-xl md:text-2xl text-center text-yellow-dessert bg-blue-atlantic tracking-widest' style={{width: 'fit-content'}}>ABOUT ME</h2>
                 <div className='bg-white bg-opacity-50 mx-2 md:mx-0 rounded-md'>
                     <div ref={el=>(aboutText=el)} className='bg-yellow-dessert shadow-md flex flex-col space-y-4 mb-4 md:mb-6 rounded-md py-10 pl-5 pr-3 md:py-10 md:pl-10 md:pr-8'>

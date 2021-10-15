@@ -15,11 +15,11 @@ const App = () => {
   }, [])
   return (loading ? (null) : (
     <div className='flex flex-col'>
-      <Intro />
-      <Projects />
+      {/* <Intro /> */}
+      {/* <Projects /> */}
       <Skills />
-      <About />
-      <Contact />
+      {/* <About /> */}
+      {/* <Contact /> */}
     </div>
   ));
 };

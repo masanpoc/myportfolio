@@ -14,12 +14,15 @@ module.exports = {
       },
       fontFamily: {
         lato: ["Lato"],
+        adam: ["ADAM"]
       },
       colors: {
         "grey-highlight": "#888888",
         "yellow-dessert": "#EDF5E1",
         "blue-atlantic": "#05386B",
         "green-forest": "#5CDB95",
+        "green-lintern": "#62F556",
+        "dark-borders": "#303030"
       },
     },
   },
