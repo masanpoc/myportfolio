@@ -3,18 +3,10 @@ import Github from './svg/Github'
 import LiveDemo from './svg/LiveDemo'
 import Stick from './svg/Stick';
 
-const Project = ({data}) => {
+const Project = ({data, width}) => {
     const currentColor = "#8F8F8F";
     const currentColorStick= "#303030"
-    const [width, setWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-      // console.log("rerendered");
-      window.addEventListener("resize", () => setWidth(window.innerWidth));
-      return () => {
-        window.removeEventListener("resize", () => setWidth(window.innerWidth));
-      };
-    }, []);
+    
 
     return (
         <div className='flex flex-col md:flex-row md:space-x-6 mx-5 md:mx-0 relative border-dark-borders border-2'>

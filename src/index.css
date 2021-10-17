@@ -37,4 +37,7 @@
   h1, h2, h3 {
     @apply text-green-lintern font-adam opacity-90
   }
+  p {
+    @apply text-base
+  }
 }

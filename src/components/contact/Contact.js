@@ -1,31 +1,30 @@
 import React from 'react'
+import Location from './svg/location'
 
 const Contact = () => {
+
+    const currentColor = "#8F8F8F";
+
     return (
-        <div className='mt-20 md:mt-40'>
+        <div id='contact' className='mt-20 md:mt-40'>
             <hr></hr>
             <div className="flex justify-end space-x-5 pr-8 pt-10 md:pr-14 md:space-x-7 h-60 md:h-52">
-                <svg style={{ width: "60px", height: "60px" }} viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <a
-                        href="https://www.linkedin.com/in/mario-cirer/"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                    <ellipse cx="27.2056" cy="29.8277" rx="21.3056" ry="19.9944" fill="#EDF5E1"/>
-                    <path d="M28.5167 0C12.7671 0 0 13.0606 0 29.1722C0 45.2838 12.7671 58.3444 28.5167 58.3444C44.2662 58.3444 57.0333 45.2838 57.0333 29.1722C57.0333 13.0606 44.2662 0 28.5167 0ZM21.536 41.2635H15.7614V22.2529H21.536V41.2635ZM18.6131 19.9192C16.7892 19.9192 15.6099 18.5973 15.6099 16.9624C15.6099 15.2941 16.8248 14.0118 18.6873 14.0118C20.5498 14.0118 21.6905 15.2941 21.7261 16.9624C21.7261 18.5973 20.5498 19.9192 18.6131 19.9192ZM42.6265 41.2635H36.8518V30.7281C36.8518 28.2758 36.0142 26.6105 33.9259 26.6105C32.3308 26.6105 31.3832 27.7379 30.9643 28.8228C30.8099 29.2087 30.7713 29.7557 30.7713 30.2996V41.2605H24.9937V28.3153C24.9937 25.942 24.9194 23.9577 24.8422 22.2499H29.8593L30.1237 24.8906H30.2395C31 23.6508 32.8625 21.8214 35.9785 21.8214C39.7778 21.8214 42.6265 24.4257 42.6265 30.0231V41.2635Z" fill="#05386B"/>
-                    </a>
-                </svg>
-                <svg style={{ width: "60px", height: "60px" }} viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <a
-                        href="mailto:marioscp1998@outlook.es"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        <circle cx="29.2167" cy="29.8277" r="29.1722" fill="#05386B"/>
-                        <path d="M44.669 17.0444H13.7643C13.0812 17.0444 12.4262 17.3138 11.9432 17.7933C11.4602 18.2727 11.1889 18.923 11.1889 19.6011V40.0544C11.1889 40.7325 11.4602 41.3828 11.9432 41.8623C12.4262 42.3417 13.0812 42.6111 13.7643 42.6111H44.669C45.3521 42.6111 46.0071 42.3417 46.4901 41.8623C46.9731 41.3828 47.2444 40.7325 47.2444 40.0544V19.6011C47.2444 18.923 46.9731 18.2727 46.4901 17.7933C46.0071 17.3138 45.3521 17.0444 44.669 17.0444ZM41.8361 19.6011L29.2167 28.2682L16.5972 19.6011H41.8361ZM13.7643 40.0544V20.7644L28.4827 30.876C28.6982 31.0244 28.9543 31.104 29.2167 31.104C29.479 31.104 29.7351 31.0244 29.9506 30.876L44.669 20.7644V40.0544H13.7643Z" fill="#EDF5E1"/>
-                    </a>
-                </svg>
-              </div>
+                ¡<h2 className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center text-green-lintern opacity-90 border-b-2 border-green-lintern' style={{width: 'fit-content'}}>Contact</h2>
+                <div>
+                    {/* map */}
+                    <span className='hidden md:block'>La Coruña, Spain</span>
+                    <Location className='hidden md:block' color={currentColor}/>
+                    {/* info */}
+                    <div>
+                        <h3 className='font-adam text-green-lintern'>Send me an email:</h3>
+                        <h3>marioscp1998@outlook.es</h3>
+                        <h3 className='font-adam text-green-lintern'>Connect with me through Linkedn:</h3>
+                        <a href='https://www.linkedin.com/in/mario-cirer/' rel="noreferrer"
+                            target="_blank">See Linkedn Profile</a>
+                        <h4 className='font-adam text-green-lintern'>Open to relocation & remote working</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

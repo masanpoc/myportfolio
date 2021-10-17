@@ -2,10 +2,10 @@ import React from 'react'
 import {data} from './Data'
 import Project from './Project'
 
-const Projects = () => {
+const Projects = ({width}) => {
     
     return (
-        <div >
+        <div id='projects'>
             <hr></hr>
             <div className='flex flex-col justify-center space-y-20 md:space-y-32 mt-24 md:mt-28 mb-40'>
                 
@@ -18,10 +18,10 @@ const Projects = () => {
                         )
                     } else {
                         return (
-                            <>
-                            <Project key={projectData.appTitle.substring(0,5)} data={projectData} />
-                            <hr className=' w-4/12 mx-auto border-dark-borders bg-dark-borders' style={{borderWidth: '1.5px'}}></hr>
-                            </>
+                            <div key={projectData.appTitle.substring(0,5)} className='flex flex-col justify-center space-y-32 md:space-y-24'>
+                                <Project data={projectData} width={width} />
+                                <hr className=' w-4/12 mx-auto border-dark-borders bg-dark-borders' style={{borderWidth: '1.5px'}}></hr>
+                            </div>
                         )
                     }
                     

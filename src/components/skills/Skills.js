@@ -62,7 +62,7 @@ const Skills = () => {
     }, [])
 
     return (
-        <div >
+        <div id='skills'>
             <hr></hr>
             <div className='flex flex-col justify-center space-y-16 md:space-y-32 mt-24 md:mt-28 mb-40'>
                 
