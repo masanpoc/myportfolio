@@ -1,5 +1,5 @@
 import React from 'react'
-import Location from './svg/location'
+import Location from './svg/Location'
 
 const Contact = () => {
 
