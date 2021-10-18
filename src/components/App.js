@@ -6,7 +6,7 @@ import Skills from "./skills/Skills";
 import Footer from './footer/Footer'
 import modeReducer from "../reducers/modeReducer";
 
-export const ModeContext = createContext();
+export const ModeContext = createContext({state: {mode: 'dark'}});
 
 const App = () => {
   // generated will be a state.generate value in Store, not a Hook
@@ -34,13 +34,13 @@ const App = () => {
 
   return (loading ? (null) : (
     <ModeContext.Provider value={{state, dispatch}}>
-    <div className='flex flex-col'>
-      <Intro width={width}/>
-      <Projects width={width} />
-      <Skills />
-      <Contact />
-      <Footer />
-    </div>
+      <div className='flex flex-col'>
+        <Intro width={width}/>
+        <Projects width={width} />
+        <Skills />
+        <Contact />
+        <Footer />
+      </div>
     </ModeContext.Provider> 
   ));
 };

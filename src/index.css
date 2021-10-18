@@ -29,13 +29,13 @@
 
 @layer base {
   body {
-    @apply font-lato bg-black;
+    @apply font-lato bg-white dark:bg-black;
   }
   hr {
-    @apply border-t-2 border-green-lintern opacity-90
+    @apply border-t-2 border-light-theme-grey bg-light-theme-grey dark:border-green-lintern dark:bg-green-lintern opacity-90
   }
   h1, h2, h3 {
-    @apply text-green-lintern font-adam opacity-90
+    @apply text-light-theme-grey dark:text-green-lintern font-adam opacity-90
   }
   p {
     @apply text-base
