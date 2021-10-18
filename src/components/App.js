@@ -3,6 +3,7 @@ import Intro from './intro/Intro';
 import Projects from "./projects/Projects";
 import Contact from './contact/Contact'
 import Skills from "./skills/Skills";
+import Footer from './footer/Footer'
 import modeReducer from "../reducers/modeReducer";
 
 export const ModeContext = createContext();
@@ -38,6 +39,7 @@ const App = () => {
       <Projects width={width} />
       <Skills />
       <Contact />
+      <Footer />
     </div>
     </ModeContext.Provider> 
   ));

@@ -7,6 +7,7 @@ import squareDesktop from './png/squareDt.png'
 import { executeScrollForId } from '../../functions/executeScrollForId';
 import Burger from './svg/Burger';
 import Shape from './svg/Shape';
+import Moon from './svg/Moon'
 
 const Intro = ({width}) => {
     let sayHiMessage = useRef();
@@ -48,13 +49,14 @@ const Intro = ({width}) => {
                 // })
             }
         }
-        fadeIn();
+        // fadeIn();
     }, [])
 
     const {state, dispatch} = useContext(ModeContext);
     const [darkMode, setDarkMode] = useState(true);
 
     useEffect(() => {
+        // + animation
         if(darkMode){
             dispatch({type: 'DARK', value: 'dark'})
         } else {
@@ -66,52 +68,64 @@ const Intro = ({width}) => {
     
 
     return (
-        <div id='about'  className='flex flex-col space-y-52 md:space-y-60 pt-36 md:pt-52 items-center text-blue-atlantic h-screen'>
-            {/* change mode svg */}
-
-            {/* heading (mobile or desktop) */}
-            {
-                width > 768 ?  
+        <div className='flex flex-col items-center space-y-28 pb-40 min-h-screen relative md:overflow-x-hidden'>
+            <div className='flex flex-row w-full items-start md:items-center justify-between px-8 py-8 md:px-12 md:pt-4 md:pb-8'>
+                {/* navbar (mobile), keeping in mind order */}
+                {width<=768 && <button onClick={()=>undefined}> <Burger /></button>}
+                {/* change mode svg */}
+                <button onClick={()=>{setDarkMode(!darkMode)}} className='md:pt-4'>
+                    <Moon />
+                    {/* <Sun /> */}
+                </button>
+                {/* navbar (desktop) */}
+                {
+                    width > 768 &&  
+                    
+                    <ul className='sticky flex flex-row text-green-lintern space-x-8 text-xl'>
+                    {/* sticky menu */}
+                        <li><button onClick={()=>executeScrollForId('about')}>About</button></li>
+                        <span>|</span>
+                        <li><button onClick={()=>executeScrollForId('projects')}>Projects</button></li> 
+                        <span>|</span>
+                        <li><button onClick={()=>executeScrollForId('skills')}>Tech Skills</button></li> 
+                        <span>|</span>
+                        <li><button onClick={()=>executeScrollForId('contact')}>Contact</button></li>           
+                    </ul> 
+                    
+                    
+                }
                 
-                <ul className='sticky'>
-                {/* sticky menu */}
-                    <li><button onClick={()=>executeScrollForId('about')}>About</button></li>
-                    <span>|</span>
-                    <li><button onClick={()=>executeScrollForId('projects')}>Projects</button></li> 
-                    <span>|</span>
-                    <li><button onClick={()=>executeScrollForId('skills')}>Tech Skills</button></li> 
-                    <span>|</span>
-                    <li><button onClick={()=>executeScrollForId('contact')}>Contact</button></li>           
-                </ul> 
                 
-                : <button onClick={()=>undefined}> <Burger /></button>
-            }
-        {/* <button onClick={()=>{setDarkMode(!darkMode)}} >Change mode</button> */}
-
-            {/* face close to square */}
-            <img src={width>768 && face} className='absolute' />
-                {/* irregular shape close to square */}
-                <div className='absolute w-full'>
+            </div>
+            
+            {/* irregular shape close to square */}
+            <div id='about' className='absolute' style={width>768 ? {width: '100vw', height: '70vh', top: '0%', transform: 'translateX(-20%)'} : {width: '100vw', height: '85vh', top: '4%', transform: 'translateX(0%)'}} >
                     <Shape color={currentColor} />
-                </div>
-
+            </div>
+            {/* face close to square */}
+            {width>768 && <img src={face} className='absolute' style={{width: '385px', transform: 'translateX(-70%)'}} />}
+            
+            
             {/* text box */}
-            <div ref={el=>(sayHiMessage=el)} className='text-3xl flex flex-col justify-center w-10/12 space-y-2 md:pr-80 relative'>
+            <div ref={el=>(sayHiMessage=el)} className='text-3xl flex flex-col justify-center w-10/12 space-y-2 md:pr-80 relative'
+             style={width>768 ? {position: 'absolute', top: '0', transform: 'translate(30%, 40%)'} : {}}>
                 
+                
+
                 {/* background: black square in png format */}
-                <img src={width>768 ? squareDesktop : squareMobile } className='absolute' style={{height: '120%', width: '100%', top: '50%', transform: 'translateY(-52%)'}} />
+                <img    src={width>768 ? squareDesktop : squareMobile } className='absolute' style={width>768 ? {height: '125%', width: '62%', top: '54%', left: '2%', transform: 'translateY(-52%)'} : {height: '120%', width: '100%', top: '50%', transform: 'translateY(-52%)'}} />
                 {/* content */}
-                <h1 className='z-10'>Frontend Developer</h1>
-                <div className='flex flex-col space-y-4 z-10'>
+                <h1 className='z-10' style={{padding: '2% 0 0 10%'}} >Frontend Developer</h1>
+                <div className='flex flex-col space-y-4 z-10' style={width>768 ? {padding: '2% 10% 0 10%', maxWidth: '55vw'} :{padding: '5% 10% 0 10%'}} >
                     <p className='text-dark-text'>
-                        Hello, Im Mario Sancho, a chemical engineering graduate that decided to take another path and join the Tech community.
+                        Hello, I&#39;m Mario Sancho, a chemical engineering graduate that decided to take another path and join the Tech community.
                     </p>
                     <p className='text-dark-text'>
-                        Currently, Im a creative React developer that uses logical and critical thinking to solve problems. Im a person motivated by 
+                        Currently, I&#39;m a <span className='text-green-lintern'> creative React developer</span> that uses logical and critical thinking to solve problems. I&#39;m a person motivated by 
                         working well as part of a team and mentoring and coaching others.
                     </p>
                     <p className='text-dark-text'>
-                        If you are looking for a frontend developer, Im available for work and Im open to work with most up-to-date technologies.
+                        If you are looking for a frontend developer, I&#39;m <span className='text-green-lintern'> available for work </span> and I&#39;m open to work with most up-to-date technologies.
                     </p>
                     <p className='text-dark-text'>
                         Welcome to my portfolio!

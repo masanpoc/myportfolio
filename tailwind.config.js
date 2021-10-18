@@ -24,6 +24,7 @@ module.exports = {
         "green-lintern": "#62F556",
         "dark-borders": "#303030",
         "dark-text": "#8F8F8F",
+        "light-location": "#C0C0C0"
       },
     },
   },
