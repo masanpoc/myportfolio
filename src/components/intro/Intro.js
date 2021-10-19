@@ -14,8 +14,10 @@ import Sun from './svg/Sun';
 import Modal from './subcomponents/Modal';
 
 const Intro = ({width}) => {
-    let sayHiMessage = useRef();
-    let welcomeMessage = useRef();
+    let shapeRef = useRef();
+    let squareRef = useRef();
+    let picRef = useRef();
+    let navBarAndModeRef = useRef();
     const fadeInTimeline = useRef();
     
     useLayoutEffect(() => {
@@ -23,37 +25,48 @@ const Intro = ({width}) => {
             if(window.outerWidth>768){
                 fadeInTimeline.current = gsap.timeline()
                 fadeInTimeline.current
-                .from(sayHiMessage, {
+                .from(squareRef, {
+                    autoAlpha: 0,
+                    duration: 1.5,
+                    delay: 0.5,
+                    xPercent: 50
+                })
+                .from(shapeRef, {
                     autoAlpha: 0,
                     duration: 1,
-                    delay: 0.5,
-                    xPercent: -10
+                    scale: 0,
+                    ease: "bounce.out"
+                }, '<1')
+                .from(picRef, {
+                    autoAlpha: 0,
+                    yPercent: 20,
+                    duration: 1
                 })
-                // .from(welcomeMessage, {
-                //     autoAlpha: 0,
-                //     duration: 1,
-                //     delay:0.1,
-                //     yPercent: 80,
-                // })
+                .from(navBarAndModeRef, {
+                    autoAlpha: 0,
+                    duration: 1
+                })
             }
             else {
                 fadeInTimeline.current = gsap.timeline()
                 fadeInTimeline.current
-                .from(sayHiMessage, {
+                .from(squareRef, {
                     autoAlpha: 0,
                     duration: 1,
                     delay: 0.5,
-                    xPercent: -20
+                    yPercent: 20
                 })
-                // .from(welcomeMessage, {
-                //     autoAlpha: 0,
-                //     duration: 1,
-                //     delay:0.1,
-                //     yPercent: 20,
-                // })
+                .from(shapeRef, {
+                    autoAlpha: 0,
+                    duration: 1,
+                }, '<')
+                .from(navBarAndModeRef, {
+                    autoAlpha: 0,
+                    duration: 1
+                }, '<')
             }
         }
-        // fadeIn();
+        fadeIn();
     }, [])
 
     const {state, dispatch} = useContext(ModeContext);
@@ -81,14 +94,16 @@ const Intro = ({width}) => {
 
     return (
         <div className='flex flex-col items-center space-y-28 pb-40 min-h-screen relative md:overflow-x-hidden'>
-            <div className='flex flex-row w-full 
+            <div ref={(el)=>(navBarAndModeRef=el)} className='flex flex-row w-full 
             
             items-center justify-between px-8 py-8 md:px-12 md:pt-4 md:pb-8 border-b-2 md:border-b-0 border-light-theme-grey dark:border-green-lintern border-opacity-90'>
                 {/* navbar (mobile), keeping in mind order */}
-                {width<=768 && <button onClick={handleClick}> 
-                    <Burger color={state.mode=='dark' ? '#62F556' : '#000000'} bg={state.mode=='dark' ? "#4B4B4B" : "#C4DEF5"} />
+                {width<=768 && <div onClick={handleClick}> 
+                    <button onClick={handleClick}>
+                        <Burger color={state.mode=='dark' ? '#62F556' : '#000000'} bg={state.mode=='dark' ? "#4B4B4B" : "#C4DEF5"} />
+                    </button>
                     <Modal isActive={isActive} />
-                </button>}
+                </div>}
                 {/* change mode svg */}
                 <button onClick={()=>{setDarkMode(!darkMode)}} className='md:pt-4'>
                     {state.mode=='dark' ? <Moon /> : <Sun />}
@@ -115,15 +130,15 @@ const Intro = ({width}) => {
             </div>
             
             {/* irregular shape close to square */}
-            <div id='about' className='absolute' style={width>768 ? {width: '100vw', height: '70vh', top: '0%', transform: 'translateX(-20%)'} : {width: '100vw', height: '85vh', top: '4%', transform: 'translateX(0%)'}} >
+            <div ref={(el)=>(shapeRef=el)} id='about' className='absolute' style={width>768 ? {width: '100vw', height: '70vh', top: '0%', transform: 'translateX(-20%)'} : {width: '100vw', height: '85vh', top: '4%', transform: 'translateX(0%)'}} >
                     <Shape color={currentColor} />
             </div>
             {/* face close to square */}
-            {width>768 && <img src={face} className='absolute' style={{width: '385px', transform: 'translateX(-70%)'}} />}
+            {width>768 && <img ref={(el)=>(picRef=el)} src={face} className='absolute' style={{width: '385px', transform: 'translateX(-70%)'}} />}
             
             
             {/* text box */}
-            <div ref={el=>(sayHiMessage=el)} className='text-3xl flex flex-col justify-center w-10/12 space-y-2 md:pr-80 relative'
+            <div ref={el=>(squareRef=el)} className='text-3xl flex flex-col justify-center w-10/12 space-y-2 md:pr-80 relative'
              style={width>768 ? {position: 'absolute', top: '0', transform: 'translate(30%, 40%)'} : {}}>
                 
                 

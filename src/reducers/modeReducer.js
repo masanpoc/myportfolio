@@ -1,5 +1,5 @@
 const modeReducer = (state, action) => {
-    console.log(action.value, action.type);
+    // console.log(action.value, action.type);
     if(action.type=='DARK'){
         return {...state, mode: 'dark'}
     } 

@@ -56,7 +56,6 @@ const Skills = ({width}) => {
                   });
             }
             else {
-                console.log(skillsWrapper.childNodes)
                 gsap.from(skillsWrapper.childNodes, {
                     scrollTrigger: {
                         // scrub: 1, 
