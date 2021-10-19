@@ -22,7 +22,7 @@ import {ModeContext} from '../App'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Skills = () => {
+const Skills = ({width}) => {
     let title = useRef();
     let skillsWrapper = useRef();
     const {state} = useContext(ModeContext);
@@ -143,7 +143,7 @@ const Skills = () => {
                             <h4>Routing</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>
-                            <UiDesign color={currentColor} bg={state.mode=='dark' ? '#000000' : '#C4DEF5'} />
+                            <UiDesign color={currentColor} bg={state.mode=='dark' ? '#000000' : (width>768 ? '#C4DEF5' : '#ffffff')} />
                             <h4>UI Design</h4>
                         </div>
                         <div className='flex flex-col justify-start items-center space-y-3 md:h-44'>

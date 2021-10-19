@@ -27,7 +27,9 @@ module.exports = {
         "light-location": "#C0C0C0",
         "light-theme-grey": "#262626",
         "light-theme-bblue": "#C4DEF5",
-        "light-theme-greyWhite": "#999999"
+        "light-theme-greyWhite": "#999999",
+        "light-theme-bblue-o5": "#c4def580",
+        "black-o5": "#0000007a"
       },
     },
   },

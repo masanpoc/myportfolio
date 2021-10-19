@@ -37,7 +37,7 @@ const App = () => {
       <div className='flex flex-col'>
         <Intro width={width}/>
         <Projects width={width} />
-        <Skills />
+        <Skills width={width} />
         <Contact />
         <Footer />
       </div>

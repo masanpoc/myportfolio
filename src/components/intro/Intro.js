@@ -11,6 +11,7 @@ import Burger from './svg/Burger';
 import Shape from './svg/Shape';
 import Moon from './svg/Moon';
 import Sun from './svg/Sun';
+import Modal from './subcomponents/Modal';
 
 const Intro = ({width}) => {
     let sayHiMessage = useRef();
@@ -58,6 +59,7 @@ const Intro = ({width}) => {
     const {state, dispatch} = useContext(ModeContext);
     const [darkMode, setDarkMode] = useState(true);
     const [currentColor, setCurrentColor] = useState('#434343');
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         // + animation
@@ -71,6 +73,10 @@ const Intro = ({width}) => {
             setCurrentColor('#C4DEF5');
         }
     }, [darkMode])
+
+    function handleClick() {
+        setIsActive(!isActive);
+    }
     
 
     return (
@@ -79,7 +85,10 @@ const Intro = ({width}) => {
             
             items-center justify-between px-8 py-8 md:px-12 md:pt-4 md:pb-8 border-b-2 md:border-b-0 border-light-theme-grey dark:border-green-lintern border-opacity-90'>
                 {/* navbar (mobile), keeping in mind order */}
-                {width<=768 && <button onClick={()=>undefined}> <Burger color={state.mode=='dark' ? '#62F556' : '#C4DEF5'} bg={state.mode=='dark' ? "#4B4B4B" : "#ffffff"} /></button>}
+                {width<=768 && <button onClick={handleClick}> 
+                    <Burger color={state.mode=='dark' ? '#62F556' : '#000000'} bg={state.mode=='dark' ? "#4B4B4B" : "#C4DEF5"} />
+                    <Modal isActive={isActive} />
+                </button>}
                 {/* change mode svg */}
                 <button onClick={()=>{setDarkMode(!darkMode)}} className='md:pt-4'>
                     {state.mode=='dark' ? <Moon /> : <Sun />}

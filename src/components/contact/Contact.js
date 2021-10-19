@@ -35,7 +35,7 @@ const Contact = () => {
         <div id='contact'>
             <hr></hr>
             <div className="flex flex-col justify-center space-y-16 md:space-y-24 mt-24 md:mt-28 mb-40 ">
-                ¡<h2 className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center opacity-90 border-b-2 border-light-theme-grey dark:border-green-lintern' style={{width: 'fit-content'}}>Contact</h2>
+                <h2 className=' w-3/5 mx-auto font-adam px-6 pt-2 pb-4  md:px-8 md:py-3 text-3xl text-center opacity-90 border-b-2 border-light-theme-grey dark:border-green-lintern' style={{width: 'fit-content'}}>Contact</h2>
                 <div className='flex flex-col justify-center md:flex-row w-8/12 md:w-full mx-auto '>
                     {/* map */}
                     <div className='relative hidden md:block h-auto border-l-2 border-t-2 bg-light-theme-bblue dark:bg-black 
