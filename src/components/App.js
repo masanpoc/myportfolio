@@ -37,9 +37,9 @@ const App = () => {
       <div className='flex flex-col'>
         <Intro width={width}/>
         <Projects width={width} />
-        {/* <Skills width={width} />
+        <Skills width={width} />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </div>
     </ModeContext.Provider> 
   ));
