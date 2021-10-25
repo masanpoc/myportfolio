@@ -39,7 +39,11 @@ const Project = ({data, width}) => {
                 </a>
             </div>
             <div className='flex flex-col space-y-6 md:w-9/12 mb-4 py-6 pl-5 pr-3  md:mb-0 md:py-7 md:pl-6 md:pr-5'>
-                <h3 className=' text-xl underline mt-3' >{data.appTitle}</h3>
+                <a href={data.demoLink}
+                            rel="noreferrer"
+                            target="_blank">
+                    <h3 className=' text-xl underline mt-3' >{data.appTitle}</h3>
+                </a>
                 <div className='flex flex-col space-y-4'>
                     {data.appParagraphs.map(paragraph=>{
                         return (
@@ -47,7 +51,11 @@ const Project = ({data, width}) => {
                         )
                     })}
                 </div>
-                <h3 className=' text-xl underline'>Tech Stack</h3>
+                <a href={data.ghLink}
+                            rel="noreferrer"
+                            target="_blank">
+                    <h3 className=' text-xl underline'>Tech Stack</h3>
+                </a>
                 <ul className='flex flex-wrap'>
                     {data.stackItems.map((item, i)=>{
                         if(i==(data.stackItems.length-1)){
