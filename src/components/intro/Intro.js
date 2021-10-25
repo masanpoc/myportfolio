@@ -25,11 +25,17 @@ const Intro = ({width}) => {
             if(window.outerWidth>768){
                 fadeInTimeline.current = gsap.timeline()
                 fadeInTimeline.current
-                .from(squareRef, {
+                .fromTo(squareRef, {
                     autoAlpha: 0,
+                    xPercent: 60,
+                    yPercent: 40
+                }, {
+                    autoAlpha: 1, 
+                    xPercent: 30,
+                    yPercent: 40,
                     duration: 1.5,
                     delay: 0.5,
-                    xPercent: 50
+                    ease: 'power2.out'
                 })
                 .from(shapeRef, {
                     autoAlpha: 0,
@@ -139,7 +145,7 @@ const Intro = ({width}) => {
             
             {/* text box */}
             <div ref={el=>(squareRef=el)} className='text-3xl flex flex-col justify-center w-10/12 space-y-2 md:pr-80 relative'
-             style={width>768 ? {position: 'absolute', top: '0', transform: 'translate(30%, 40%)'} : {}}>
+             style={width>768 ? {position: 'absolute', top: '0'} : {}}>
                 
                 
 
